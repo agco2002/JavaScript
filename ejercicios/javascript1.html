@@ -1,0 +1,53 @@
+
+<html>
+<head>
+	<title>Ejemplos de Javascript parte 1</title>
+</head>
+<body>
+	<h1>Ejemplos de Javascript</h1>
+
+	<noscript>
+		Atencion para un mejor funcionamiento favor de activar el javascript en este navegador
+	</noscript>
+
+	<script type="text/javascript">
+		alert('Este mensaje fue generado con javascript');
+	</script>
+	<script type="text/javascript">
+		var nombre = "Bogota D.C";
+		nombre = "usted se encuentra en " + nombre + "Colombia";
+		alert(nombre);
+	</script>
+
+	<br>
+
+	<script type="text/javascript">
+		document.write('Mensaje escrito con javascript');
+	</script>
+
+	<script type="text/javascript">
+		document.write('<h2>Los siguientes controles fueron generados con javascript:</h2>');
+		document.write('<input type="text" name="Textbox1">');
+		document.write('<input type="button" name="boton1" value="aceptar">');
+		document.write('<h2>El siguiente combo de opciones fue generado con javascrip:</h2>');
+		document.write('<select><option>SI</option><option>NO</option></select>');
+	</script>
+
+	<br>
+	<br>
+	<a href="javascript:alert('gracias')">click aqui...</a>
+	<br>
+	<h2>Botones de navegacion web</h2>
+	<table border="0" bgcolor="#FFCC66">
+		<tr>
+			<td align="center">
+				<input type="button" value="Atras" 
+				onclick="javascript:window.history.go(-1);">
+				<input type="button" value="Arriba" onclick="document.location='#top'";>
+				<input type="button" value="siguiente"
+				onclick="javascript:window.history.go(1);"></td>
+		</tr>
+	</table>
+
+</body>
+</html>

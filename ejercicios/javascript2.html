@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplos de javascript parte 2</title>
+</head>
+
+<body>
+
+	<h1>Ejemplos de javascript parte 2</h1>
+	<noscript>
+		Atencion: Para un mejor funcionamiento favor de activar el javascript en este navegador 
+	</noscript>
+
+	<script type="text/javascript">
+		
+		window.open('popup.html','AVISO','toolbar=0,location=0,status=0,menubar=0,scrollbars=yes,resizable=yes,width=490,height=232'); 
+	</script>
+
+	<script type="text/javascript">
+		
+		var seleccion = confirm("Desea abrir la pagina de google?");
+
+		if (seleccion)
+		{
+			window.open('http://www.google.com','google', '');
+		}
+		else
+		{
+			alert("La sugerencia no fue aceptada");
+		}
+	</script>
+
+	<script type="text/javascript">
+		
+		var nombre = prompt('Introduzca su nombre');
+		var mensaje = "Sea bienvenido a mi pagina" + nombre;
+		alert(mensaje);
+
+		var apellido = prompt('Introduzca su apellido');
+		var mensaje2 = "¿su apellido es" + apellido + "?";
+
+		if (confirm(mensaje2))
+		{
+			var mensaje3 = "señor(a)" + nombre + "" + apellido;
+			document.write('<h1>' + mensaje3 + '</h1>');
+			document.write('<h2>Muchas gracias por su valioso tiempo......Presione F5 para volver a empezar</h2>'); 
+		}
+		else
+		{
+			document.write('<h2>¿No ingreso su apellido correctamente?...Presione F5 e intente nuevamente...</h2></br>');
+		}
+		
+	</script>
+
+</body>
+</html>

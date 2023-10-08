@@ -1,0 +1,145 @@
+
+<html>
+<head>
+	<title>Ejemplos de programacion javascript</title>
+</head>
+
+<body>
+
+	<h1>Funciones y estructuras de programacion Javascript </h1>
+
+	<noscript>
+		Atencion: Para un mejor funcionamiento favor de activar el Javascript en su navegador
+	</noscript>
+
+	<script>
+		function CalcularEdad()
+		{
+			var nacimiento= form1.nacimiento.value;
+			var actual= form1.actual.value;
+			var edad= actual - nacimiento;
+
+			if (edad<18)
+			{
+				alert("Usted es menor de edad y tiene : "+ edad + " años");
+			}
+			else
+			{
+				alert("Usted es mayor de edad y tiene :"+ edad + " años");
+			}
+	        }
+	</script>
+
+	<script>
+
+	function verFecha()
+	{
+		var fecha = new Date();
+
+		var hoy = fecha.getDay();
+		var dia = fecha.getDate();
+		var mes = fecha.getMonth(); + 1;
+		var año = fecha.getFullYear();
+
+		switch (hoy)
+		{
+			case 0:
+			mensaje = "Hoy es domingo"
+			break;
+			case 1:
+			mensaje="Hoy es lunes";
+			break;
+			case 2:
+			mensaje="Hoy es martes";
+			break;
+			case 3:
+			mensaje="Hoy es miercoles";
+			break;
+			case 4: 
+			mensaje="Hoy es jueves";
+			break;
+			case 5:
+			mensaje="Hoy es viernes";
+			break;
+			case 6:
+			mensaje="Hoy es sabado";
+			break;
+			default:
+			mensaje="se presento un error intentando leer la fecha ";
+		}
+          alert(mensaje + dia + " del mes " + mes + " del año " + año);
+	}
+
+</script>
+
+
+<script>
+
+	function GenerarTextBox() 
+	{
+		var numtext=form1.numtext.value;
+		document.write('<h1>Controles generados usando ciclo for en javascript</h1>');
+		document.write('<a href="javascript3.html">volver</a><br>');
+
+		for (i=0; i<=numtext; i++)
+		{
+			document.write('<h2>TextBox Nº:' + i + '</h2>');
+			document.write('<input type="text" name="TextBox"' + i + '" ></br>');
+
+		}
+	}
+</script>
+
+<form id="form1" name="form1" method="get">
+	
+	<h2>Calcule su edad</h2>
+	<b>Su año de nacimiento es: </b>
+	<input type="text" name="nacimiento" id="nacimiento">
+
+
+<b>Año actual: </b>
+<input type="text" name="actual" id="actual">
+
+<input type="button" value="Calcular Edad" onclick="CalcularEdad();">
+
+<br>
+<br>
+
+<b>Que Dia es Hoy?: </b>
+<input type="button" value="Ver" onclick ="verFecha();">
+
+<br>
+<br>
+<b>Generar varios TextBox con un solo click</b><br>
+<b>Ingrese cuantos TextBox Desea Generar: </b>
+<input type="text" name="numtext" id="numtext">
+<input type="button" value="Generar TextBox" onclick="GenerarTextBox();">
+
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Calculador de promedio</title>
+
+</head>
+
+<body>
+
+	<center>
+		<h1>CALCULAR PROMEDIO</h1>
+
+
+		<p>Nota 1 <input type="text" id="n1"></p>
+		<p>Nota 2 <input type="text" id="n2"></p>
+		<p>Nota 3 <input type="text" id="n3"></p>
+
+		<p><input type="button" value="Calcular" onclick="CalcularPromedio()"></p>
+        <p id="promedio"></p>
+
+   </center>
+
+</body>
+<script>
+	function CalcularPromedio()
+	{
+		var v1 = document.getElementById("n1").value;
+		var v2 = document.getElementById("n2").value;
+		var v3 = document.getElementById("n3").value;
+		var pro = (parseFloat(v1)+parseFloat(v2)+parseFloat(v3))/3;
+        document.getElementById("promedio").innerHTML = pro;
+        if (pro<5)
+        {
+        	alert("Desaprobo la materia" + pro)
+
+        }
+        else (pro>5)
+        {
+        	alert("Aprobo la materia" + pro)
+        }
+
+	}
+
+
+</script>
+</html>
